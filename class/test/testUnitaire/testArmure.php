@@ -52,7 +52,6 @@
     echo "".$Armure->getValeur()."</p>";
 
     var_dump($Armure);
-
  echo '</div>';
 
 ?>
