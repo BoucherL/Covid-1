@@ -1,10 +1,12 @@
-<?php
-    $listPersos = $map->getAllPersonnages();
-    if(count($listPersos)>1){
-        ?>
-            <div class="left">
-                <p class='NoSolo'>Visiblement tu n'es pas seul ici il y a aussi :</p>
-                <ul id="ulPersos" class="Persos">
+<div class="divAllPerso">
+    <?php
+        $listPersos = $map->getAllPersonnages();
+        if(count($listPersos) > 1){
+            ?>
+                <div class='divInfoPlayers'>
+                    <p class='pInfoPlayers'>Visiblement tu n'es pas seul ici il y a aussi :</p>
+                </div>
+                <ul id="ulPersos" class="ulPersonnages">
                     <?php
                         $PersoJoeuur = $Joueur1->getPersonnage();
                         foreach($listPersos as  $Perso){
@@ -20,7 +22,10 @@
                         }
                     ?>
                 </ul>
-            </div>
-        <?php
-    }
-?>
+            <?php
+        }
+        else{
+            $ZoneMobEmpty++;
+        }
+    ?>
+</div>
