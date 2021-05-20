@@ -14,5 +14,12 @@
 
     $typepersonnage = new TypePersonnage($mabase);
 
-    $typepersonnage->setTypePersonnageById(1);
+    echo $typepersonnage->setTypePersonnageById(1);
+
+    var_dump($typepersonnage);
+
+    echo '<p>Id type personnage '.$typepersonnage->getId().'</p>';
+    echo '<p> Nom '.$typepersonnage->getNom().'</p>';
+
+
 ?>
